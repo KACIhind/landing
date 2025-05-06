@@ -60,9 +60,9 @@
             <p>Let AI create a form for you based on your description.</p>
         </div>
         <div class="options">
-            <a href="form-method-selection.html" class="option-card">
+            <a href="./form-methode-selection.html" class="option-card">
                 <div class="icon">📝</div>
-                <h2>Form Generator</h2>
+                <h2>developer</h2>
                 <p>Choose between AI-generated or Standard form creation.</p>
             </a>
             <a href="admin-options.html" class="option-card">
@@ -70,10 +70,76 @@
                 <h2>Admin</h2>
                 <p>Manage all form data and access the forms list.</p>
             </a>
+            <a href="forms-list.html" class="option-card">
+              <div class="icon">📋</div>
+              <h2>user</h2>
+              <p>Access the list of all generated forms.</p>
+          </a>
         </div>
     </div>
 
-   
+   <script src="Cont.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      function loadParticles(color) {
+        if (window.pJSDom && window.pJSDom.length > 0) {
+          window.pJSDom[0].pJS.fn.vendors.destroypJS();
+          window.pJSDom = [];
+        }
+
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: color },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: color,
+              opacity: 0.4,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "grab" },
+              onclick: { enable: true, mode: "push" },
+              resize: true
+            },
+            modes: {
+              grab: { distance: 140, line_linked: { opacity: 1 } },
+              push: { particles_nb: 4 }
+            }
+          },
+          retina_detect: true
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const isDark = document.body.classList.contains("darkmode");
+        loadParticles(isDark ? "#ffffff" : "#000000");
+
+        document.getElementById("theme-switch").addEventListener("click", () => {
+          setTimeout(() => {
+            const isDarkNow = document.body.classList.contains("darkmode");
+            loadParticles(isDarkNow ? "#ffffff" : "#000000");
+          }, 100);
+        });
+      });
+    </script>
     <script>
       const canvas = document.getElementById('shootingCanvas');
       const ctx = canvas.getContext('2d');

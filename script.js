@@ -1,4 +1,3 @@
-
 // Function to add a new field
 function addField() {
     const fieldsContainer = document.getElementById("fields-container");
