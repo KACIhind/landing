@@ -1,317 +1,154 @@
-        <!DOCTYPE html>
-        <html lang="en" data-theme="light">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Navigui- Find Your Perfect Forms</title>
-            <link rel="stylesheet" href="styles.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        </head>
-        <body>
-            <!-- Floating purple accents -->
-            <div class="purple-accent accent-1"></div>
-            <div class="purple-accent accent-2"></div>
-            <div class="purple-accent accent-3"></div>
-            
-            <header class="header">
-                <nav class="navbar">
-                    <div class="nav-container bento-card">
-                        <!-- Logo -->
-                        <a href="#" class="logo">
-                            <div class="logo-image-container">
-                                <img src="assets/logo-light-navigui-test.png" alt="Logo" class="logo-image light-logo">
-                                <img src="assets/logo-dark-navigui-test.png" alt="Logo" class="logo-image dark-logo">
-                            </div>
-                        </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Form Generator</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet"/>
+    <script src="darkmode.js" defer></script>
+    <style>
+    #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;              
+  pointer-events: none;    
+}
 
-                        <!-- Menu principal -->
-                        <div class="menu-items">
-                      
-                            <a href="#works" class="menu-item">How it works</a>
-                            <a href="#workspace" class="menu-item">Workspace</a>
-                           
-                        </div>
+#particles-js canvas {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;     
+}
+.homepage,
+.container {
+  position: relative;
+  z-index: 1;
+}
+#shootingCanvas {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  pointer-events: none;
+}
+    </style>
+</head>
+<body>
+  <canvas id="shootingCanvas"></canvas>
+    <div id="particles-js"></div>
 
-                        <!-- Auth & Theme -->
-                        <div class="nav-right">
-                            <a href="/../src/View/login.php" class="get-started-btn">Get started</a>
-                            <label class="switch">
-                                <input type="checkbox" id="themeToggle">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
+   
+    <button id="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+            <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+        </svg>
+    </button>
 
-                        <!-- Mobile Menu Button -->
-                        <button class="hamburger-menu" aria-label="Menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-
-                    <!-- Mobile Menu -->
-                    <div class="mobile-menu">
-                        <div class="mobile-menu-content">
-                          
-                            <a href="#works" class="mobile-menu-item">How it works</a>
-                            <a href="#workspace" class="mobile-menu-item">Workspace</a>
-                            
-                        </div>
-                    </div>
-                </nav>
-            </header>
-
-            <main>
-                <!-- Hero Section -->
-                <section class="hero-dark">
-                    <div class="hero-background">
-                        <div class="circuit-lines"></div>
-                        <div class="circuit-pattern bottom-left"></div>
-                        <div class="circuit-pattern bottom-right"></div>
-                    </div>
-                    <div class="sphere-container">
-                        <div class="sphere-animation">
-                            <div class="sphere-particles"></div>
-                        </div>
-                    </div>
-                    <div class="hero-content-wrapper">
-                        <div class="hero-badge">
-                            <i class="fas fa-rocket"></i> Find Your Future
-                        </div>
-                        <h1>Making forms got you confused? <br><span>Time to Navigui</span></h1>
-                        <p>
-                            Navigui uses AI and smart templates to generate beautiful, functional forms—so you can focus on what matters. <br>
-                            Perfect for developers, teams, and businesses that value speed and simplicity
-                        </p>
-                        <div class="cta-buttons">
-                            <a href="../src/View/login.php" class="cta-button animated">Get Started Today</a>
-                        </div>
-                        <!-- Scroll Icon -->
-                        <div class="scroll-down-container">
-                            <div class="scroll-down-icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </div>
-                            <span class="scroll-text">Scroll Down</span>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!-- Featured Internships -->
-              
-
-                <!-- How It Works -->
-                <section class="how-it-works" id="works">
-                    <div class="container">
-                        <div class="section-header centered reveal">
-                            <h2>How Navigui Works</h2>
-                            <p>Create forms in minutes, not hours</p>
-                        </div>
-                        <div class="steps-container">
-                            <div class="step-item reveal delay-1">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <div class="step-icon">
-                                        <i class="fas fa-user-plus"></i>
-                                    </div>
-                                    <h3>Choose or Describe</h3>
-                                    <p>Select a standard template or describe your form in natural language—we’ll take it from there.</p>
-                                </div>
-                            </div>
-                            <div class="step-item reveal delay-2">
-                                <div class="step-number">2</div>
-                                <div class="step-content">
-                                    <div class="step-icon">
-                                        <i class="fas fa-search"></i>
-                                    </div>
-                                    <h3>AI Builds Your Form</h3>
-                                    <p>Our AI engine generates a fully functional, customizable form in seconds.</p>
-                                </div>
-                            </div>
-                            <div class="step-item reveal delay-3">
-                                <div class="step-number">3</div>
-                                <div class="step-content">
-                                    <div class="step-icon">
-                                        <i class="fas fa-paper-plane"></i>
-                                    </div>
-                                    <h3>Integrate and Launch</h3>
-                                    <p>Export your form or embed it directly into your app, site, or workflow.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Collaborative Workspace Section -->
-<section class="workspace-section" id="workspace">
-    <div class="container">
-        <div class="section-header centered reveal">
-            <h2>Our Collaborative Network</h2>
-            <p>Skilled pilots managing your accounts so you don't have to</p>
+   
+    <div class="homepage">
+        <div class="header">
+            <h1>Welcome to Form Generator!</h1>
+            <p>Let AI create a form for you based on your description.</p>
         </div>
-        
-        <div class="collab-network-wrapper">
-            <div class="hub-center">
-                <div class="hub-app-icon">
-                    <img src="assets/logo_EXIA_RVB.png" alt="Navigui Hub">
-                    <div class="teacher-info">
-                        <p class="teacher-name">Prof. gendouz</p>
-                        <span class="teacher-title">Course Director</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="profile-connections">
-                <!-- Existing Profile Cards -->
-                <div class="profile-card top-left">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <p class="profile-name">Daoudi Wassim</p>
-                        <span class="profile-title">Wix Developer</span>
-                    </div>
-                </div>
-                
-                <div class="profile-card top-right">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <p class="profile-name">BOUTMEDJET Abd elmoudjib</p>
-                        <span class="profile-title">UI/UX Designer</span>
-                    </div>
-                </div>
-                
-                <div class="profile-card bottom-left">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <p class="profile-name">KACI Hind</p>
-                        <span class="profile-title">Developer</span>
-                    </div>
-                </div>
-                
-                <div class="profile-card bottom-right">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <p class="profile-name">Hamek Mohamed</p>
-                        <span class="profile-title">Programmer</span>
-                    </div>
-                </div>
-
-                <!-- New Profile Cards -->
-                <div class="profile-card mid-top">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <p class="profile-name">Lisri Akram</p>
-                        <span class="profile-title">Data Scientist</span>
-                    </div>
-                </div>
-
-                <div class="profile-card bottom-mid">
-                    <div class="profile-picture">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="profile-info">
-                        <p class="profile-name">Boudjemia Farhat Youcef</p>
-                        <span class="profile-title">Backend Developer</span>
-                    </div>
-                </div>
-
-                <!-- Connection Paths -->
-                <div class="connection-path top-left"></div>
-                <div class="connection-path top-right"></div>
-                <div class="connection-path bottom-left"></div>
-                <div class="connection-path bottom-right"></div>
-                <div class="connection-path mid-top"></div>
-                <div class="connection-path bottom-mid"></div>
-            </div>
+        <div class="options">
+            <a href="form-method-selection.html" class="option-card">
+                <div class="icon">📝</div>
+                <h2>Form Generator</h2>
+                <p>Choose between AI-generated or Standard form creation.</p>
+            </a>
+            <a href="admin-options.html" class="option-card">
+                <div class="icon">🔧</div>
+                <h2>Admin</h2>
+                <p>Manage all form data and access the forms list.</p>
+            </a>
         </div>
     </div>
-</section>
 
-                <!-- Testimonials -->
-                
-
-                <!-- FAQ Section -->
-              
-            </main>
-
-            <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="footer-logo-container">
-                            <img src="assets/logo-light-navigui-test.png" alt="Navigui" class="footer-logo-img light-logo">
-                            <img src="assets/logo-dark-navigui-test.png" alt="Navigui" class="footer-logo-img dark-logo">
-                        </div>
-                    </div>
-                    <p>Connecting students with their dream internships since 2020.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>For Students</h3>
-                    <ul>
-                        <li><a href="/../src/View/login.php">Browse Internships</a></li>
-                        <li><a href="/../src/View/login.php">Career Resources</a></li>
-
-                        <li><a href="/../src/View/login.php">Resume Builder</a></li>
-                        <li><a href="/../src/View/login.php">Success Stories</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>For Employers</h3>
-                    <ul>
-                        <li><a href="/../src/View/login.php">Post an Internship</a></li>
-                        <li><a href="/../src/View/login.php">Browse Candidates</a></li>
-                        <li><a href="/../src/View/login.php">Employer Resources</a></li>
-                        <li><a href="/../src/View/login.php">Success Stories</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-envelope"></i> support@navigui.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, San Francisco, CA 94107</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Navigui. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="legal-mentions.html">Privacy Policy</a>
-                    <a href="legal-mentions.html">Terms of Service</a>
-                    <a href="cookie-policy.html">Cookies</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-        </footer> <!-- Keep this closing tag -->
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsentBanner" class="cookie-consent-banner">
-        <div class="cookie-consent-content">
-            <p>
-                We use cookies and similar technologies to enhance your browsing experience and provide personalized content. By clicking "Accept", you agree to our use of cookies and acknowledge our <a href="legal-mentions.html" target="_blank" class="cookie-link">Legal Mentions</a> and <a href="cookie-policy.html" target="_blank" class="cookie-link">Cookie Policy</a>.
-            </p>
-        </div>
-        <button id="acceptCookies" class="cookie-accept-btn">Accept</button>
-    </div>
+   
+    <script>
+      const canvas = document.getElementById('shootingCanvas');
+      const ctx = canvas.getContext('2d');
     
-    <script src="script.js"></script>
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+    
+      class ShootingStar {
+        constructor() {
+          this.reset();
+        }
+    
+        reset() {
+          this.x = Math.random() * canvas.width * 1.5;
+          this.y = -Math.random() * canvas.height; // Start above screen
+          this.length = Math.random() * 200 + 100; // Longer trail
+          this.speed = Math.random() * 4 + 4; // Faster speed for quicker movement
+          this.angle = Math.PI * 3 / 4; // 135 degrees = top right ➔ bottom left
+          this.opacity = Math.random() * 0.3 + 0.2; // Slightly brighter stars
+          this.fade = Math.random() * 0.0015 + 0.001; // Slower fade for smoother transition
+        }
+    
+        update() {
+          this.x += Math.cos(this.angle) * this.speed;
+          this.y += Math.sin(this.angle) * this.speed;
+    
+          // Ensure opacity fades smoothly
+          if (this.opacity > 0) {
+            this.opacity -= this.fade;
+          }
+    
+          // Reset the star if it goes out of bounds or fades completely
+          if (this.opacity <= 0 || this.y > canvas.height + 100) {
+            this.reset();
+          }
+        }
+    
+        draw() {
+          // Draw trail (longer and slightly brighter)
+          ctx.beginPath();
+          ctx.moveTo(this.x, this.y);
+          ctx.lineTo(this.x - Math.cos(this.angle) * this.length, this.y - Math.sin(this.angle) * this.length);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity + 0.1})`; // Slightly brighter trail
+          ctx.lineWidth = 1;
+          ctx.stroke();
+    
+          // Draw small point for the star-like head (sharp point)
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, 2, 0, Math.PI * 2); // Smaller size for the star point
+          ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity + 0.1})`; // Slightly brighter star
+          ctx.shadowBlur = 10; // Less intense glow
+          ctx.shadowColor = "white";
+          ctx.fill();
+        }
+      }
+    
+      const stars = [];
+      for (let i = 0; i < 10; i++) {
+        stars.push(new ShootingStar());
+      }
+    
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach(star => {
+          star.update();
+          star.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+    
 </body>
-</html> 
+</html>
